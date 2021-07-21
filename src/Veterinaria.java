@@ -22,7 +22,9 @@ public class Veterinaria {
     public int MostrarCantidadClientes(){
         int contador = 0;
         for (Cliente cliente : clientes) {
-            contador ++;
+            if (cliente != null){
+                contador ++;
+            }
         }
         return contador;
     }
@@ -32,9 +34,10 @@ public class Veterinaria {
         int contador = 0;
         int edadMascotas = 0;
         for (Cliente cliente : clientes) {
-            contador ++;
-            //edadMascotas += cliente.getEdadMascota();
-            edadMascotas += cliente.getMascota().getEdadMascota();
+            if (cliente != null) {                
+                contador ++;
+                edadMascotas += cliente.getMascota().getEdadMascota();
+            }
         }
         float promedio = edadMascotas / contador;
         return promedio;
@@ -44,7 +47,7 @@ public class Veterinaria {
     public int CantidadAntiguedadMayorACinco(){
         int contador = 0;
         for (Cliente cliente : clientes) {
-            if (cliente.getAntiguedadClte() >= 5) {
+            if (cliente != null && cliente.getAntiguedadClte() >= 5) {
                 contador ++;
             }
         }

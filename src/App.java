@@ -5,7 +5,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Bienvenidos al sistema de la la Veterinaria");
-        System.out.println("Ingrese la cantidad de clientes que va a ingresar");
+        System.out.println("Ingrese la cantidad de clientes que va a cargar");
         int cantClientes = sc.nextInt();
         Veterinaria v = new Veterinaria(cantClientes);
 
